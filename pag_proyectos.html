@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c9c7b0a2916ca0a58d1a61703a035d47 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    
+                <style>
+                    #float_image_0576693e1bda674d1a5519cf9bf4860c {
+                        position: absolute;
+                        bottom: 30%;
+                        left: 86%;
+                        }
+                </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c9c7b0a2916ca0a58d1a61703a035d47" ></div>
+        
+    
+            <img id="float_image_0576693e1bda674d1a5519cf9bf4860c" alt="float_image"
+                 src="https://www.oceansandrivers.pe/wp-content/uploads/2024/09/O_R_gota-removebg-preview.png"
+                 style="z-index: 999999">
+            </img>
+            
+</body>
+<script>
+    
+    
+            var map_c9c7b0a2916ca0a58d1a61703a035d47 = L.map(
+                "map_c9c7b0a2916ca0a58d1a61703a035d47",
+                {
+                    center: [-9.6832, -74.8169],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_c9c7b0a2916ca0a58d1a61703a035d47);
+
+            
+
+        
+    
+            var tile_layer_431ce988b68719df56bb3c5bc3043286 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_431ce988b68719df56bb3c5bc3043286.addTo(map_c9c7b0a2916ca0a58d1a61703a035d47);
+        
+    
+            var tile_layer_54f2a8ce9efd7356942869d5d828ec93 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.google.com/maps\"\u003eGoogle Maps\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var feature_group_1d9830cad48250fbb73db6f95ff8637f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_1c84eb0ec30ef087895371cb7d66f91b = L.marker(
+                [-8.50965034177143, -78.59712381629936],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_010ac1b73588a7ff2dc0af4d6d144835 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_1c84eb0ec30ef087895371cb7d66f91b.setIcon(beautify_icon_010ac1b73588a7ff2dc0af4d6d144835);
+        
+    
+        var popup_880fb9130afd359ddb73998e0da01683 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_098a5d95096d4040f83051d7ceac5dac = $(`<div id="html_098a5d95096d4040f83051d7ceac5dac" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>0</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Pruebas de percolación – Fundo Arato Perú</td>     </tr>     <tr>       <th>Sector</th>       <td>Construcción / Saneamiento</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Test de percolación según norma IS.020 – Tanques sépticos RNE</td>     </tr>     <tr>       <th>Departamento</th>       <td>La Libertad</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>764530.4</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9058537.63</td>     </tr>     <tr>       <th>Zona</th>       <td>17</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-78.597124</td>     </tr>     <tr>       <th>lati</th>       <td>-8.50965</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_880fb9130afd359ddb73998e0da01683.setContent(html_098a5d95096d4040f83051d7ceac5dac);
+            
+        
+
+        marker_1c84eb0ec30ef087895371cb7d66f91b.bindPopup(popup_880fb9130afd359ddb73998e0da01683)
+        ;
+
+        
+    
+    
+            marker_1c84eb0ec30ef087895371cb7d66f91b.bindTooltip(
+                `<div>
+                     Pruebas de percolación – Fundo Arato Perú
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c84eb0ec30ef087895371cb7d66f91b.setIcon(beautify_icon_010ac1b73588a7ff2dc0af4d6d144835);
+            
+    
+            var marker_64932fcc3fc843ad89ad2d090b2a5797 = L.marker(
+                [-6.046611565041199, -79.26568754006239],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_73ac700dfcbbf2a4c49204c9d5da159c = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_64932fcc3fc843ad89ad2d090b2a5797.setIcon(beautify_icon_73ac700dfcbbf2a4c49204c9d5da159c);
+        
+    
+        var popup_b25fc67a84dc070972d7523b1d513d6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9e5c012393a8663b56dfe111dc9b993 = $(`<div id="html_a9e5c012393a8663b56dfe111dc9b993" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>1</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Canal Huallabamba – Lambayeque</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudios foronómicos (aforos), gestión y sistematización de información geográfica para mapas</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lambayeque</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>691947.87</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9331336.8</td>     </tr>     <tr>       <th>Zona</th>       <td>17</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-79.265688</td>     </tr>     <tr>       <th>lati</th>       <td>-6.046612</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_b25fc67a84dc070972d7523b1d513d6c.setContent(html_a9e5c012393a8663b56dfe111dc9b993);
+            
+        
+
+        marker_64932fcc3fc843ad89ad2d090b2a5797.bindPopup(popup_b25fc67a84dc070972d7523b1d513d6c)
+        ;
+
+        
+    
+    
+            marker_64932fcc3fc843ad89ad2d090b2a5797.bindTooltip(
+                `<div>
+                     Canal Huallabamba – Lambayeque
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_64932fcc3fc843ad89ad2d090b2a5797.setIcon(beautify_icon_73ac700dfcbbf2a4c49204c9d5da159c);
+            
+    
+            var marker_69d6279696710249b4ad01fbca1aa554 = L.marker(
+                [-5.635366271867734, -78.56179616118243],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_e244c13cbe1f45535230396c1887b5c4 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_69d6279696710249b4ad01fbca1aa554.setIcon(beautify_icon_e244c13cbe1f45535230396c1887b5c4);
+        
+    
+        var popup_f14ec714f6f878ee85cf19ac032020d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_278bbf52df312dd466bf23690440c34b = $(`<div id="html_278bbf52df312dd466bf23690440c34b" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>2</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Elaboración de memoria descriptiva que sustenta la autorización de uso de agua del punto pc-01 para el proyecto "ITC ENLACE 220 KV CÁCLIC – JAÉN NORTE (2 CIRCUITOS), AMPLIACIONES Y SUBESTACIONES ASOCIADAS"</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Elaboración de la memoria descriptiva que sustenta la autorización de uso de agua ante la ANA</td>     </tr>     <tr>       <th>Departamento</th>       <td>Amazonas</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>770089.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9376538.0</td>     </tr>     <tr>       <th>Zona</th>       <td>17</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-78.561796</td>     </tr>     <tr>       <th>lati</th>       <td>-5.635366</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_f14ec714f6f878ee85cf19ac032020d3.setContent(html_278bbf52df312dd466bf23690440c34b);
+            
+        
+
+        marker_69d6279696710249b4ad01fbca1aa554.bindPopup(popup_f14ec714f6f878ee85cf19ac032020d3)
+        ;
+
+        
+    
+    
+            marker_69d6279696710249b4ad01fbca1aa554.bindTooltip(
+                `<div>
+                     Elaboración de memoria descriptiva que sustenta la autorización de uso de agua del punto pc-01 para el proyecto "ITC ENLACE 220 KV CÁCLIC – JAÉN NORTE (2 CIRCUITOS), AMPLIACIONES Y SUBESTACIONES ASOCIADAS"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_69d6279696710249b4ad01fbca1aa554.setIcon(beautify_icon_e244c13cbe1f45535230396c1887b5c4);
+            
+    
+            var marker_4e0b3864a13da1d9f6a366a23d4adf05 = L.marker(
+                [-5.664178352577857, -77.84296415015294],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_d79c344d8377b51ba8a147fdc219830c = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_4e0b3864a13da1d9f6a366a23d4adf05.setIcon(beautify_icon_d79c344d8377b51ba8a147fdc219830c);
+        
+    
+        var popup_5deedc5348fa7dea0152b9e39e00cc1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3541dcfcc45fb67f726eed9364248be = $(`<div id="html_f3541dcfcc45fb67f726eed9364248be" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>3</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Estudios de factibilidad de proyectos hidráulicos</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudio hidrológico, aforo de caudales líquidos mediante ADCP, instalación de sensores de nivel automáticos, estaciones hidrométricas automáticas</td>     </tr>     <tr>       <th>Departamento</th>       <td>Amazonas</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>185056.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9373146.0</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-77.842964</td>     </tr>     <tr>       <th>lati</th>       <td>-5.664178</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_5deedc5348fa7dea0152b9e39e00cc1a.setContent(html_f3541dcfcc45fb67f726eed9364248be);
+            
+        
+
+        marker_4e0b3864a13da1d9f6a366a23d4adf05.bindPopup(popup_5deedc5348fa7dea0152b9e39e00cc1a)
+        ;
+
+        
+    
+    
+            marker_4e0b3864a13da1d9f6a366a23d4adf05.bindTooltip(
+                `<div>
+                     Estudios de factibilidad de proyectos hidráulicos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e0b3864a13da1d9f6a366a23d4adf05.setIcon(beautify_icon_d79c344d8377b51ba8a147fdc219830c);
+            
+    
+            var marker_3461ce59ca1e86bfb295128a18884e95 = L.marker(
+                [-11.111864721373689, -77.50959438128297],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_bd6eff5f8a6fb44d67ca4150ef605ba1 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_3461ce59ca1e86bfb295128a18884e95.setIcon(beautify_icon_bd6eff5f8a6fb44d67ca4150ef605ba1);
+        
+    
+        var popup_712895e2d6eca3c0017253288af446f8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8d093801724a61dafec5945133a6067 = $(`<div id="html_c8d093801724a61dafec5945133a6067" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>4</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Hidrometría del canal L1 Bresani del Subsector Hidráulico Santa Rosalía</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Aforo de caudales líquidos en 5 puntos del lateral de primer orden Bresani</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>225864.46</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8770493.98</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-77.509594</td>     </tr>     <tr>       <th>lati</th>       <td>-11.111865</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_712895e2d6eca3c0017253288af446f8.setContent(html_c8d093801724a61dafec5945133a6067);
+            
+        
+
+        marker_3461ce59ca1e86bfb295128a18884e95.bindPopup(popup_712895e2d6eca3c0017253288af446f8)
+        ;
+
+        
+    
+    
+            marker_3461ce59ca1e86bfb295128a18884e95.bindTooltip(
+                `<div>
+                     Hidrometría del canal L1 Bresani del Subsector Hidráulico Santa Rosalía 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3461ce59ca1e86bfb295128a18884e95.setIcon(beautify_icon_bd6eff5f8a6fb44d67ca4150ef605ba1);
+            
+    
+            var marker_830efa6ca2cd47a387d25a1ae7bdd226 = L.marker(
+                [-13.067680447466232, -76.36234940973885],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_face23f15a1a73e2cca86872bc4da3cd = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_830efa6ca2cd47a387d25a1ae7bdd226.setIcon(beautify_icon_face23f15a1a73e2cca86872bc4da3cd);
+        
+    
+        var popup_8476eb0522724252e97db9effe7b598b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef0607d62b1bec91d83041f7415e255c = $(`<div id="html_ef0607d62b1bec91d83041f7415e255c" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>5</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Diseño de canal de riego para futura tienda MAKRO en San Vicente de Cañete</td>     </tr>     <tr>       <th>Sector</th>       <td>Construcción / Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Diseño hidráulico y estructural del canal, expediente técnico-administrativo</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>352292.53</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8554982.63</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-76.362349</td>     </tr>     <tr>       <th>lati</th>       <td>-13.06768</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_8476eb0522724252e97db9effe7b598b.setContent(html_ef0607d62b1bec91d83041f7415e255c);
+            
+        
+
+        marker_830efa6ca2cd47a387d25a1ae7bdd226.bindPopup(popup_8476eb0522724252e97db9effe7b598b)
+        ;
+
+        
+    
+    
+            marker_830efa6ca2cd47a387d25a1ae7bdd226.bindTooltip(
+                `<div>
+                     Diseño de canal de riego para futura tienda MAKRO en San Vicente de Cañete
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_830efa6ca2cd47a387d25a1ae7bdd226.setIcon(beautify_icon_face23f15a1a73e2cca86872bc4da3cd);
+            
+    
+            var marker_1f7eaa045126dad422b44d730ffbea0f = L.marker(
+                [-5.242607454943039, -74.32598533458567],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_5837ba4c835c51af0fa1e863dfc7ce4a = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_1f7eaa045126dad422b44d730ffbea0f.setIcon(beautify_icon_5837ba4c835c51af0fa1e863dfc7ce4a);
+        
+    
+        var popup_b9705f8d17b2e3d99e4654026b008584 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c16e9c5b11051015cad63240d79087d = $(`<div id="html_9c16e9c5b11051015cad63240d79087d" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>6</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Evaluación de la cocha Aisipallio – Lote 95</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético / Ambiental</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Evaluación de fuentes de agua, análisis satelital, estudio hidrológico, diseño de canales de derivación, manuales de operación, automatización</td>     </tr>     <tr>       <th>Departamento</th>       <td>Loreto</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>574691.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9420478.0</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-74.325985</td>     </tr>     <tr>       <th>lati</th>       <td>-5.242607</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_b9705f8d17b2e3d99e4654026b008584.setContent(html_9c16e9c5b11051015cad63240d79087d);
+            
+        
+
+        marker_1f7eaa045126dad422b44d730ffbea0f.bindPopup(popup_b9705f8d17b2e3d99e4654026b008584)
+        ;
+
+        
+    
+    
+            marker_1f7eaa045126dad422b44d730ffbea0f.bindTooltip(
+                `<div>
+                     Evaluación de la cocha Aisipallio – Lote 95
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1f7eaa045126dad422b44d730ffbea0f.setIcon(beautify_icon_5837ba4c835c51af0fa1e863dfc7ce4a);
+            
+    
+            var marker_54b82cf7940f3bb1a8bcb12f19b6b614 = L.marker(
+                [-12.653583287039988, -73.04255412362123],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_fdbac3bde81cde84416876240e150d0e = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_54b82cf7940f3bb1a8bcb12f19b6b614.setIcon(beautify_icon_fdbac3bde81cde84416876240e150d0e);
+        
+    
+        var popup_62e63ab2083895d8deb59278b19d7f8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb3564db0e79f2155dbc010e5aa8c939 = $(`<div id="html_cb3564db0e79f2155dbc010e5aa8c939" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>7</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Licencia de agua con usos domésticos – Centro poblado de Kiteni, Cusco</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudio hidrológico, aforo líquido, expediente técnico-administrativo</td>     </tr>     <tr>       <th>Departamento</th>       <td>Cusco</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>712596.29</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8600376.95</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-73.042554</td>     </tr>     <tr>       <th>lati</th>       <td>-12.653583</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_62e63ab2083895d8deb59278b19d7f8a.setContent(html_cb3564db0e79f2155dbc010e5aa8c939);
+            
+        
+
+        marker_54b82cf7940f3bb1a8bcb12f19b6b614.bindPopup(popup_62e63ab2083895d8deb59278b19d7f8a)
+        ;
+
+        
+    
+    
+            marker_54b82cf7940f3bb1a8bcb12f19b6b614.bindTooltip(
+                `<div>
+                     Licencia de agua con usos domésticos – Centro poblado de Kiteni, Cusco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54b82cf7940f3bb1a8bcb12f19b6b614.setIcon(beautify_icon_fdbac3bde81cde84416876240e150d0e);
+            
+    
+            var marker_41e19bd391fb5b644649e680045ba9e3 = L.marker(
+                [-11.105339403274963, -77.4763613934083],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_aa79c6122240e0571a2dbf1e97143a13 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_41e19bd391fb5b644649e680045ba9e3.setIcon(beautify_icon_aa79c6122240e0571a2dbf1e97143a13);
+        
+    
+        var popup_c7eb62900c70be0f79baa0261e0873cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbf79fd629f2f086800a4bee5f26a0c7 = $(`<div id="html_dbf79fd629f2f086800a4bee5f26a0c7" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>8</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Determinación de volúmenes de drenaje – Pampa de Animas, Huara</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudio hidrológico, eficiencia de canales de concreto, aforo, expediente técnico</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>229490.77</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8771246.6</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-77.476361</td>     </tr>     <tr>       <th>lati</th>       <td>-11.105339</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_c7eb62900c70be0f79baa0261e0873cf.setContent(html_dbf79fd629f2f086800a4bee5f26a0c7);
+            
+        
+
+        marker_41e19bd391fb5b644649e680045ba9e3.bindPopup(popup_c7eb62900c70be0f79baa0261e0873cf)
+        ;
+
+        
+    
+    
+            marker_41e19bd391fb5b644649e680045ba9e3.bindTooltip(
+                `<div>
+                     Determinación de volúmenes de drenaje – Pampa de Animas, Huara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_41e19bd391fb5b644649e680045ba9e3.setIcon(beautify_icon_aa79c6122240e0571a2dbf1e97143a13);
+            
+    
+            var marker_a84e96f63fd629f054b49525f46237ae = L.marker(
+                [-11.102827903723728, -77.45053288181214],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_d4896959c76b4c2fc7ba412cad87e40d = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_a84e96f63fd629f054b49525f46237ae.setIcon(beautify_icon_d4896959c76b4c2fc7ba412cad87e40d);
+        
+    
+        var popup_504e776de907a974452e8d9def6af4d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0d982661b7bf55720e66abe68df1c80 = $(`<div id="html_e0d982661b7bf55720e66abe68df1c80" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>9</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Determinación de volúmenes de drenaje – Santa Rosalía</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudio hidrológico, aforo líquido, expediente técnico</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>232311.51</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8771547.93</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-77.450533</td>     </tr>     <tr>       <th>lati</th>       <td>-11.102828</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_504e776de907a974452e8d9def6af4d0.setContent(html_e0d982661b7bf55720e66abe68df1c80);
+            
+        
+
+        marker_a84e96f63fd629f054b49525f46237ae.bindPopup(popup_504e776de907a974452e8d9def6af4d0)
+        ;
+
+        
+    
+    
+            marker_a84e96f63fd629f054b49525f46237ae.bindTooltip(
+                `<div>
+                     Determinación de volúmenes de drenaje – Santa Rosalía
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a84e96f63fd629f054b49525f46237ae.setIcon(beautify_icon_d4896959c76b4c2fc7ba412cad87e40d);
+            
+    
+            var marker_a02c59625064205c53547d6040db99a6 = L.marker(
+                [-11.098893711873705, -77.48744527384385],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_0c38c1ceab89ef28a05ba107e8dc6585 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_a02c59625064205c53547d6040db99a6.setIcon(beautify_icon_0c38c1ceab89ef28a05ba107e8dc6585);
+        
+    
+        var popup_95b6f60e912b9fc0f53bcff9ee6e13a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15540a69be5afe52da0abe5ead7d2ca9 = $(`<div id="html_15540a69be5afe52da0abe5ead7d2ca9" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>10</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Determinación de eficiencia de riego – Santa Rosalía</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudio hidrológico, eficiencia de conducción de canales de concreto y tierra</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>228273.33</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8771949.82</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-77.487445</td>     </tr>     <tr>       <th>lati</th>       <td>-11.098894</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_95b6f60e912b9fc0f53bcff9ee6e13a1.setContent(html_15540a69be5afe52da0abe5ead7d2ca9);
+            
+        
+
+        marker_a02c59625064205c53547d6040db99a6.bindPopup(popup_95b6f60e912b9fc0f53bcff9ee6e13a1)
+        ;
+
+        
+    
+    
+            marker_a02c59625064205c53547d6040db99a6.bindTooltip(
+                `<div>
+                     Determinación de eficiencia de riego – Santa Rosalía
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a02c59625064205c53547d6040db99a6.setIcon(beautify_icon_0c38c1ceab89ef28a05ba107e8dc6585);
+            
+    
+            var marker_13157e767a5d85a7bc1e94b01f3f4a0f = L.marker(
+                [-8.766295983163756, -76.21034833617306],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_5ee0cf553349a657122fa9578ca877f5 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_13157e767a5d85a7bc1e94b01f3f4a0f.setIcon(beautify_icon_5ee0cf553349a657122fa9578ca877f5);
+        
+    
+        var popup_0b06e234506fe32fc400256f109d493b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94607e169fed8bf9c8d5863718cfd878 = $(`<div id="html_94607e169fed8bf9c8d5863718cfd878" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>11</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Determinación de volúmenes disponibles – Proyecto Agrobelaunde</td>     </tr>     <tr>       <th>Sector</th>       <td>Industrial</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudio hidrológico, expediente técnico para acreditación de disponibilidad</td>     </tr>     <tr>       <th>Departamento</th>       <td>San Martín</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>366872.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9030771.0</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-76.210348</td>     </tr>     <tr>       <th>lati</th>       <td>-8.766296</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_0b06e234506fe32fc400256f109d493b.setContent(html_94607e169fed8bf9c8d5863718cfd878);
+            
+        
+
+        marker_13157e767a5d85a7bc1e94b01f3f4a0f.bindPopup(popup_0b06e234506fe32fc400256f109d493b)
+        ;
+
+        
+    
+    
+            marker_13157e767a5d85a7bc1e94b01f3f4a0f.bindTooltip(
+                `<div>
+                     Determinación de volúmenes disponibles – Proyecto Agrobelaunde
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_13157e767a5d85a7bc1e94b01f3f4a0f.setIcon(beautify_icon_5ee0cf553349a657122fa9578ca877f5);
+            
+    
+            var marker_7e86f33ed8db27b85ee5a0361715e369 = L.marker(
+                [-12.078123642172839, -76.9472745362904],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_176b495e8b837bd81bd43d7b95fcd42e = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_7e86f33ed8db27b85ee5a0361715e369.setIcon(beautify_icon_176b495e8b837bd81bd43d7b95fcd42e);
+        
+    
+        var popup_0c8a2076eb25cb7b566f0a7a9febde3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d110aaab07d7d674d4ae61b6c9b37ea3 = $(`<div id="html_d110aaab07d7d674d4ae61b6c9b37ea3" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>12</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Instalación de sistema de riego por goteo – Proyecto 241 PTT</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Diseño e instalación de sistema de riego tecnificado</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>288045.22</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8664053.71</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-76.947275</td>     </tr>     <tr>       <th>lati</th>       <td>-12.078124</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_0c8a2076eb25cb7b566f0a7a9febde3a.setContent(html_d110aaab07d7d674d4ae61b6c9b37ea3);
+            
+        
+
+        marker_7e86f33ed8db27b85ee5a0361715e369.bindPopup(popup_0c8a2076eb25cb7b566f0a7a9febde3a)
+        ;
+
+        
+    
+    
+            marker_7e86f33ed8db27b85ee5a0361715e369.bindTooltip(
+                `<div>
+                     Instalación de sistema de riego por goteo – Proyecto 241 PTT
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7e86f33ed8db27b85ee5a0361715e369.setIcon(beautify_icon_176b495e8b837bd81bd43d7b95fcd42e);
+            
+    
+            var marker_faf8f04342095586e4568e9bb771d486 = L.marker(
+                [-13.029482030290591, -76.19480128250792],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_d8688ea25fe6e4e42ced2a70f94d18a2 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_faf8f04342095586e4568e9bb771d486.setIcon(beautify_icon_d8688ea25fe6e4e42ced2a70f94d18a2);
+        
+    
+        var popup_e1d0e571eabf4a2444273e107bd9c074 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba0234f2a6fe54243663f89eb802e9a4 = $(`<div id="html_ba0234f2a6fe54243663f89eb802e9a4" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>13</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Estudios básicos de la derivación Cañete – Lima Sur</td>     </tr>     <tr>       <th>Sector</th>       <td>Agua y Saneamiento</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Aforo de caudales líquidos (ADCP y correntómetro), muestreo de sedimentos</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>370440.94</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8559299.38</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-76.194801</td>     </tr>     <tr>       <th>lati</th>       <td>-13.029482</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_e1d0e571eabf4a2444273e107bd9c074.setContent(html_ba0234f2a6fe54243663f89eb802e9a4);
+            
+        
+
+        marker_faf8f04342095586e4568e9bb771d486.bindPopup(popup_e1d0e571eabf4a2444273e107bd9c074)
+        ;
+
+        
+    
+    
+            marker_faf8f04342095586e4568e9bb771d486.bindTooltip(
+                `<div>
+                     Estudios básicos de la derivación Cañete – Lima Sur 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_faf8f04342095586e4568e9bb771d486.setIcon(beautify_icon_d8688ea25fe6e4e42ced2a70f94d18a2);
+            
+    
+            var marker_3607d7a9a8810256be501d0b4789bcd2 = L.marker(
+                [-5.243782066726142, -74.32799986761741],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_4fff835be6d65f372dd983cea64733d6 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_3607d7a9a8810256be501d0b4789bcd2.setIcon(beautify_icon_4fff835be6d65f372dd983cea64733d6);
+        
+    
+        var popup_0016ac3b8f84bf8a17cb454068ad499c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51c6080e489d38fe4155d49fa8a11c21 = $(`<div id="html_51c6080e489d38fe4155d49fa8a11c21" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>14</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Ampliación y mejora tecnológica – Pozo exploratorio Lote 95</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Actualización de estudio hidrológico, cálculos de caudales medios y máximas avenidas, expediente técnico</td>     </tr>     <tr>       <th>Departamento</th>       <td>Loreto</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>574467.61</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9420348.39</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-74.328</td>     </tr>     <tr>       <th>lati</th>       <td>-5.243782</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_0016ac3b8f84bf8a17cb454068ad499c.setContent(html_51c6080e489d38fe4155d49fa8a11c21);
+            
+        
+
+        marker_3607d7a9a8810256be501d0b4789bcd2.bindPopup(popup_0016ac3b8f84bf8a17cb454068ad499c)
+        ;
+
+        
+    
+    
+            marker_3607d7a9a8810256be501d0b4789bcd2.bindTooltip(
+                `<div>
+                     Ampliación y mejora tecnológica – Pozo exploratorio Lote 95
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3607d7a9a8810256be501d0b4789bcd2.setIcon(beautify_icon_4fff835be6d65f372dd983cea64733d6);
+            
+    
+            var marker_e5b23b0c5298743ccbad3e59895b81f7 = L.marker(
+                [-13.434566677381698, -73.82771669894716],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_45f45a4572e5c472bfd90c7ffe0f907e = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_e5b23b0c5298743ccbad3e59895b81f7.setIcon(beautify_icon_45f45a4572e5c472bfd90c7ffe0f907e);
+        
+    
+        var popup_4774ab405e3c6d4454ee0875b9880280 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dffae5f74359df03eac2446d90f139be = $(`<div id="html_dffae5f74359df03eac2446d90f139be" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>15</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Estudio hidrológico de las cinco cuencas – ANA</td>     </tr>     <tr>       <th>Sector</th>       <td>Recursos Hídricos</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Aforo de caudales líquidos (ADCP y correntómetro), muestreo de sedimentos en Nanay, Ucayali y Pampas</td>     </tr>     <tr>       <th>Departamento</th>       <td>Ayacucho</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>626907.13</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8514504.71</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-73.827717</td>     </tr>     <tr>       <th>lati</th>       <td>-13.434567</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_4774ab405e3c6d4454ee0875b9880280.setContent(html_dffae5f74359df03eac2446d90f139be);
+            
+        
+
+        marker_e5b23b0c5298743ccbad3e59895b81f7.bindPopup(popup_4774ab405e3c6d4454ee0875b9880280)
+        ;
+
+        
+    
+    
+            marker_e5b23b0c5298743ccbad3e59895b81f7.bindTooltip(
+                `<div>
+                     Estudio hidrológico de las cinco cuencas – ANA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5b23b0c5298743ccbad3e59895b81f7.setIcon(beautify_icon_45f45a4572e5c472bfd90c7ffe0f907e);
+            
+    
+            var marker_c03dd43aeda20bbf20eb866eba634e74 = L.marker(
+                [-3.9342679159190346, -74.97569911762739],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_f3f5af8384642b2a6110b829a4341809 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_c03dd43aeda20bbf20eb866eba634e74.setIcon(beautify_icon_f3f5af8384642b2a6110b829a4341809);
+        
+    
+        var popup_86021beef6be42bbf030900170f810a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51119bfd04dd5cef596d872fedd41361 = $(`<div id="html_51119bfd04dd5cef596d872fedd41361" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>16</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Estudios hidrológicos – Lote N°8</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>34 estudios hidrológicos de fuentes de agua, inventario, aforo de caudales líquidos, supervisión de calidad</td>     </tr>     <tr>       <th>Departamento</th>       <td>Loreto</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>502697.75</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9565138.29</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-74.975699</td>     </tr>     <tr>       <th>lati</th>       <td>-3.934268</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_86021beef6be42bbf030900170f810a2.setContent(html_51119bfd04dd5cef596d872fedd41361);
+            
+        
+
+        marker_c03dd43aeda20bbf20eb866eba634e74.bindPopup(popup_86021beef6be42bbf030900170f810a2)
+        ;
+
+        
+    
+    
+            marker_c03dd43aeda20bbf20eb866eba634e74.bindTooltip(
+                `<div>
+                     Estudios hidrológicos – Lote N°8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c03dd43aeda20bbf20eb866eba634e74.setIcon(beautify_icon_f3f5af8384642b2a6110b829a4341809);
+            
+    
+            var marker_ef0465e5cd91a1ebca12290d6e267043 = L.marker(
+                [-10.031199833223388, -75.03395253476305],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_7d57f22e30fcb6ff517f459ce4e26c92 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_ef0465e5cd91a1ebca12290d6e267043.setIcon(beautify_icon_7d57f22e30fcb6ff517f459ce4e26c92);
+        
+    
+        var popup_bd64c40c0b05c1d15fdc11a021b0cfe6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_baa55d383cad4b54153d63304a6de93f = $(`<div id="html_baa55d383cad4b54153d63304a6de93f" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>17</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Perforación de pozos exploratorios – Lote N°107</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Cálculo de caudales medios y máximas avenidas en río Pichis y quebrada Unión Siria, expedientes técnicos</td>     </tr>     <tr>       <th>Departamento</th>       <td>Cerro de Pasco</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>496279.31</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8891137.75</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-75.033953</td>     </tr>     <tr>       <th>lati</th>       <td>-10.0312</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_bd64c40c0b05c1d15fdc11a021b0cfe6.setContent(html_baa55d383cad4b54153d63304a6de93f);
+            
+        
+
+        marker_ef0465e5cd91a1ebca12290d6e267043.bindPopup(popup_bd64c40c0b05c1d15fdc11a021b0cfe6)
+        ;
+
+        
+    
+    
+            marker_ef0465e5cd91a1ebca12290d6e267043.bindTooltip(
+                `<div>
+                     Perforación de pozos exploratorios – Lote N°107
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef0465e5cd91a1ebca12290d6e267043.setIcon(beautify_icon_7d57f22e30fcb6ff517f459ce4e26c92);
+            
+    
+            var marker_58192a4e7e5cac5f7dd70f5029ad0827 = L.marker(
+                [-11.735227356317631, -76.6075686440873],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_0bafc88e0b6c7812391c3df615104355 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_58192a4e7e5cac5f7dd70f5029ad0827.setIcon(beautify_icon_0bafc88e0b6c7812391c3df615104355);
+        
+    
+        var popup_dc5f2e2149374036a0846cbedf6443bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ed04ed89f72bd61451062e2a1ee15ce = $(`<div id="html_6ed04ed89f72bd61451062e2a1ee15ce" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>18</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Nuevo embalse Autisha – Santa Eulalia</td>     </tr>     <tr>       <th>Sector</th>       <td>Agua y Saneamiento</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudio sedimentológico, análisis granulométricos, aforo de caudales sólidos en suspensión</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>324811.38</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8702224.17</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-76.607569</td>     </tr>     <tr>       <th>lati</th>       <td>-11.735227</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_dc5f2e2149374036a0846cbedf6443bb.setContent(html_6ed04ed89f72bd61451062e2a1ee15ce);
+            
+        
+
+        marker_58192a4e7e5cac5f7dd70f5029ad0827.bindPopup(popup_dc5f2e2149374036a0846cbedf6443bb)
+        ;
+
+        
+    
+    
+            marker_58192a4e7e5cac5f7dd70f5029ad0827.bindTooltip(
+                `<div>
+                     Nuevo embalse Autisha – Santa Eulalia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_58192a4e7e5cac5f7dd70f5029ad0827.setIcon(beautify_icon_0bafc88e0b6c7812391c3df615104355);
+            
+    
+            var marker_3cf4729b058b4c40cdb9da6341015457 = L.marker(
+                [-5.242916530774012, -74.32882320745509],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_e78f10c9d3679e991466404fe59c00f2 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_3cf4729b058b4c40cdb9da6341015457.setIcon(beautify_icon_e78f10c9d3679e991466404fe59c00f2);
+        
+    
+        var popup_fc2ce4106af7486ef639508a83246f09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6c05a3af2dc17beb09af4c92dd29a22 = $(`<div id="html_a6c05a3af2dc17beb09af4c92dd29a22" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>19</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Estudio hidrológico del río canal Puinahua</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Actualización del estudio hidrológico, cálculo de caudales medios, cálculo de máximas avenidas</td>     </tr>     <tr>       <th>Departamento</th>       <td>Loreto</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>574376.47</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9420444.17</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-74.328823</td>     </tr>     <tr>       <th>lati</th>       <td>-5.242917</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_fc2ce4106af7486ef639508a83246f09.setContent(html_a6c05a3af2dc17beb09af4c92dd29a22);
+            
+        
+
+        marker_3cf4729b058b4c40cdb9da6341015457.bindPopup(popup_fc2ce4106af7486ef639508a83246f09)
+        ;
+
+        
+    
+    
+            marker_3cf4729b058b4c40cdb9da6341015457.bindTooltip(
+                `<div>
+                     Estudio hidrológico del río canal Puinahua
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3cf4729b058b4c40cdb9da6341015457.setIcon(beautify_icon_e78f10c9d3679e991466404fe59c00f2);
+            
+    
+            var marker_f95efbaea93d8c6e725f3d8a8c7a2ebc = L.marker(
+                [-6.4939515371630625, -76.36861462582134],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_638e05c60a2546b7916dd459c84b2065 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_f95efbaea93d8c6e725f3d8a8c7a2ebc.setIcon(beautify_icon_638e05c60a2546b7916dd459c84b2065);
+        
+    
+        var popup_68fc89a999231f6adf4262110163aa6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0aa3acfb2f50c11e999420a2c68d48bd = $(`<div id="html_0aa3acfb2f50c11e999420a2c68d48bd" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>20</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Centro Comercial Tarapoto</td>     </tr>     <tr>       <th>Sector</th>       <td>Construcción</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Expediente técnico para autorización de drenaje pluvial y construcción de canales y cunetas</td>     </tr>     <tr>       <th>Departamento</th>       <td>San Martín</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>348664.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9281988.0</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-76.368615</td>     </tr>     <tr>       <th>lati</th>       <td>-6.493952</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_68fc89a999231f6adf4262110163aa6a.setContent(html_0aa3acfb2f50c11e999420a2c68d48bd);
+            
+        
+
+        marker_f95efbaea93d8c6e725f3d8a8c7a2ebc.bindPopup(popup_68fc89a999231f6adf4262110163aa6a)
+        ;
+
+        
+    
+    
+            marker_f95efbaea93d8c6e725f3d8a8c7a2ebc.bindTooltip(
+                `<div>
+                     Centro Comercial Tarapoto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f95efbaea93d8c6e725f3d8a8c7a2ebc.setIcon(beautify_icon_638e05c60a2546b7916dd459c84b2065);
+            
+    
+            var marker_7bb1be85c5c8b7163e152599982a076b = L.marker(
+                [-12.453016156568774, -73.03760740503024],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_02001dfbe41114cf2557671fee988942 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_7bb1be85c5c8b7163e152599982a076b.setIcon(beautify_icon_02001dfbe41114cf2557671fee988942);
+        
+    
+        var popup_434fe09f8dcf387e3538e13ecebd6565 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0b7a6ed822206af7c8102c1e1061aeb = $(`<div id="html_b0b7a6ed822206af7c8102c1e1061aeb" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>21</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Gasoducto Sur Peruano – Seguridad Energética</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudios hidrológicos e hidráulicos de quebradas y ríos, determinación de caudales, cálculos de enterramiento y anchos de cauce, expedientes técnicos, batimetría</td>     </tr>     <tr>       <th>Departamento</th>       <td>Cusco</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>713299.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8622564.0</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-73.037607</td>     </tr>     <tr>       <th>lati</th>       <td>-12.453016</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_434fe09f8dcf387e3538e13ecebd6565.setContent(html_b0b7a6ed822206af7c8102c1e1061aeb);
+            
+        
+
+        marker_7bb1be85c5c8b7163e152599982a076b.bindPopup(popup_434fe09f8dcf387e3538e13ecebd6565)
+        ;
+
+        
+    
+    
+            marker_7bb1be85c5c8b7163e152599982a076b.bindTooltip(
+                `<div>
+                     Gasoducto Sur Peruano – Seguridad Energética
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7bb1be85c5c8b7163e152599982a076b.setIcon(beautify_icon_02001dfbe41114cf2557671fee988942);
+            
+    
+            var marker_7a8422638f5c8814ce587306b48cbb3d = L.marker(
+                [-12.053157626847034, -75.35036367819079],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_ab6f33baafacead68c48e41d6eeb6809 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_7a8422638f5c8814ce587306b48cbb3d.setIcon(beautify_icon_ab6f33baafacead68c48e41d6eeb6809);
+        
+    
+        var popup_99acdc63284ff0515f230c6c413803e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36cc481e4fe23ce71425e9765812eee1 = $(`<div id="html_36cc481e4fe23ce71425e9765812eee1" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>22</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Sistema de Riego – Río Cunas</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudios hidrológicos e hidráulicos, cálculo de eficiencias de riego, aforo de caudales sólidos, inventarios de fuentes e infraestructura</td>     </tr>     <tr>       <th>Departamento</th>       <td>Junín</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>461867.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8667543.94</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-75.350364</td>     </tr>     <tr>       <th>lati</th>       <td>-12.053158</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_99acdc63284ff0515f230c6c413803e6.setContent(html_36cc481e4fe23ce71425e9765812eee1);
+            
+        
+
+        marker_7a8422638f5c8814ce587306b48cbb3d.bindPopup(popup_99acdc63284ff0515f230c6c413803e6)
+        ;
+
+        
+    
+    
+            marker_7a8422638f5c8814ce587306b48cbb3d.bindTooltip(
+                `<div>
+                     Sistema de Riego – Río Cunas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a8422638f5c8814ce587306b48cbb3d.setIcon(beautify_icon_ab6f33baafacead68c48e41d6eeb6809);
+            
+    
+            var marker_632a841b899a8d2e114af7d957c2009b = L.marker(
+                [-11.863054153781121, -77.05903063135273],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_6dc27e7f638ac7205f4c671c866e8ff5 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_632a841b899a8d2e114af7d957c2009b.setIcon(beautify_icon_6dc27e7f638ac7205f4c671c866e8ff5);
+        
+    
+        var popup_61401ae5280f01267ff9e4b466ed48cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e047ba8b9aa6dccdf38913b91176fe9a = $(`<div id="html_e047ba8b9aa6dccdf38913b91176fe9a" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>23</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Condominio Real – Carabayllo</td>     </tr>     <tr>       <th>Sector</th>       <td>Construcción / Saneamiento</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Balance hídrico del sistema de tratamiento de aguas residuales, autorización de vertimiento/infiltración</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>275698.79</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8687760.7</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-77.059031</td>     </tr>     <tr>       <th>lati</th>       <td>-11.863054</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_61401ae5280f01267ff9e4b466ed48cc.setContent(html_e047ba8b9aa6dccdf38913b91176fe9a);
+            
+        
+
+        marker_632a841b899a8d2e114af7d957c2009b.bindPopup(popup_61401ae5280f01267ff9e4b466ed48cc)
+        ;
+
+        
+    
+    
+            marker_632a841b899a8d2e114af7d957c2009b.bindTooltip(
+                `<div>
+                     Condominio Real – Carabayllo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_632a841b899a8d2e114af7d957c2009b.setIcon(beautify_icon_6dc27e7f638ac7205f4c671c866e8ff5);
+            
+    
+            var marker_576b45dc048294be399277fc1d01378a = L.marker(
+                [-5.979540383167201, -74.84872898456092],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_e0f26259eb4c61788e8fb71b7ec54bf1 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_576b45dc048294be399277fc1d01378a.setIcon(beautify_icon_e0f26259eb4c61788e8fb71b7ec54bf1);
+        
+    
+        var popup_566f9a9e0224d86e254a175b84cd6777 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6946ddc00a5f576c3d4edca13680f3a = $(`<div id="html_c6946ddc00a5f576c3d4edca13680f3a" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>24</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Mantenimiento y reparación de oleoducto – Lote 8, Yanayacu</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Estudio hidrológico del sistema de agua potable, expediente técnico para uso de agua industrial</td>     </tr>     <tr>       <th>Departamento</th>       <td>Loreto</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>516741.72</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>9339054.78</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>M</td>     </tr>     <tr>       <th>long</th>       <td>-74.848729</td>     </tr>     <tr>       <th>lati</th>       <td>-5.97954</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_566f9a9e0224d86e254a175b84cd6777.setContent(html_c6946ddc00a5f576c3d4edca13680f3a);
+            
+        
+
+        marker_576b45dc048294be399277fc1d01378a.bindPopup(popup_566f9a9e0224d86e254a175b84cd6777)
+        ;
+
+        
+    
+    
+            marker_576b45dc048294be399277fc1d01378a.bindTooltip(
+                `<div>
+                     Mantenimiento y reparación de oleoducto – Lote 8, Yanayacu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_576b45dc048294be399277fc1d01378a.setIcon(beautify_icon_e0f26259eb4c61788e8fb71b7ec54bf1);
+            
+    
+            var marker_aba9e66b93db5c1785520d0cfa18d267 = L.marker(
+                [-13.943631040382757, -72.22881133917149],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_1f5761daf54aeda12b4b82248df5f4f4 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_aba9e66b93db5c1785520d0cfa18d267.setIcon(beautify_icon_1f5761daf54aeda12b4b82248df5f4f4);
+        
+    
+        var popup_78d3ebbc99fd22197e803a3e44601657 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d751c73212140ea1039223dc2e59f480 = $(`<div id="html_d751c73212140ea1039223dc2e59f480" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>25</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Servicio de consultoría para predecir las condiciones climáticas futuras a corto plazo en el contexto del inminente fenómeno el niño global y costero</td>     </tr>     <tr>       <th>Sector</th>       <td>Minero</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Prever los potenciales cambios hidroclimáticos</td>     </tr>     <tr>       <th>Departamento</th>       <td>Apurimac</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>799439.52</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8456761.87</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-72.228811</td>     </tr>     <tr>       <th>lati</th>       <td>-13.943631</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_78d3ebbc99fd22197e803a3e44601657.setContent(html_d751c73212140ea1039223dc2e59f480);
+            
+        
+
+        marker_aba9e66b93db5c1785520d0cfa18d267.bindPopup(popup_78d3ebbc99fd22197e803a3e44601657)
+        ;
+
+        
+    
+    
+            marker_aba9e66b93db5c1785520d0cfa18d267.bindTooltip(
+                `<div>
+                     Servicio de consultoría para predecir las condiciones climáticas futuras a corto plazo en el contexto del inminente fenómeno el niño global y costero 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aba9e66b93db5c1785520d0cfa18d267.setIcon(beautify_icon_1f5761daf54aeda12b4b82248df5f4f4);
+            
+    
+            var marker_0160ce3bbd28bdd3a9682d46fc8e0569 = L.marker(
+                [-12.99141019763412, -76.38953916418876],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_195057194017a6b22082043bab002216 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_0160ce3bbd28bdd3a9682d46fc8e0569.setIcon(beautify_icon_195057194017a6b22082043bab002216);
+        
+    
+        var popup_bc17872c32b3024132f73ec97fa9853a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88899162319d0caac23c42c685b25644 = $(`<div id="html_88899162319d0caac23c42c685b25644" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>26</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Evaluación, diagnóstico y rehabilitación del afloramiento de agua en el fundo Natuperú –Quilmaná, cañete</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Elaboración del diagnostico y ejecución de la rehabilitación para solucionar el problema de afloramiento</td>     </tr>     <tr>       <th>Departamento</th>       <td>Lima</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>349297.93</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8563403.32</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-76.389539</td>     </tr>     <tr>       <th>lati</th>       <td>-12.99141</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_bc17872c32b3024132f73ec97fa9853a.setContent(html_88899162319d0caac23c42c685b25644);
+            
+        
+
+        marker_0160ce3bbd28bdd3a9682d46fc8e0569.bindPopup(popup_bc17872c32b3024132f73ec97fa9853a)
+        ;
+
+        
+    
+    
+            marker_0160ce3bbd28bdd3a9682d46fc8e0569.bindTooltip(
+                `<div>
+                     Evaluación, diagnóstico y rehabilitación del afloramiento de agua en el fundo Natuperú –Quilmaná, cañete
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0160ce3bbd28bdd3a9682d46fc8e0569.setIcon(beautify_icon_195057194017a6b22082043bab002216);
+            
+    
+            var marker_06e9d505ee1ee8059683dd2e306bdf3d = L.marker(
+                [-14.707919033019921, -75.31751238769519],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_ec089d30f91b7a4e8bf367765ec51b7f = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_06e9d505ee1ee8059683dd2e306bdf3d.setIcon(beautify_icon_ec089d30f91b7a4e8bf367765ec51b7f);
+        
+    
+        var popup_49afa515e8b0ca65e344c0002cf0ef12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7f86f26c3bc6203e360c01e4aab56a4 = $(`<div id="html_d7f86f26c3bc6203e360c01e4aab56a4" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>27</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Elaboración de memoria descriptiva que sustenta la autorización de uso de agua del punto pc-01 para el proyecto "enlace 220 kv Ica – Poroma, ampliaciones y subestaciones asociadas"</td>     </tr>     <tr>       <th>Sector</th>       <td>Energético</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Elaboración de la memoria descriptiva que sustenta la autorización de uso de agua ante la ANA</td>     </tr>     <tr>       <th>Departamento</th>       <td>Ica</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>465819.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8373955.0</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-75.317512</td>     </tr>     <tr>       <th>lati</th>       <td>-14.707919</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_49afa515e8b0ca65e344c0002cf0ef12.setContent(html_d7f86f26c3bc6203e360c01e4aab56a4);
+            
+        
+
+        marker_06e9d505ee1ee8059683dd2e306bdf3d.bindPopup(popup_49afa515e8b0ca65e344c0002cf0ef12)
+        ;
+
+        
+    
+    
+            marker_06e9d505ee1ee8059683dd2e306bdf3d.bindTooltip(
+                `<div>
+                     Elaboración de memoria descriptiva que sustenta la autorización de uso de agua del punto pc-01 para el proyecto "enlace 220 kv Ica – Poroma, ampliaciones y subestaciones asociadas"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_06e9d505ee1ee8059683dd2e306bdf3d.setIcon(beautify_icon_ec089d30f91b7a4e8bf367765ec51b7f);
+            
+    
+            var marker_376fb785acfac4fbbec73b0ea0245b94 = L.marker(
+                [-14.319180471005076, -75.6233752579669],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_52e265fb16c6f8d5a2e5b4e1498859c4 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_376fb785acfac4fbbec73b0ea0245b94.setIcon(beautify_icon_52e265fb16c6f8d5a2e5b4e1498859c4);
+        
+    
+        var popup_e8a1df7fec86ce6ba103442c4e173df1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0e932e9afc208f69309463c017c98c7 = $(`<div id="html_d0e932e9afc208f69309463c017c98c7" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>28</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Servicio de consultoría para elaboración de un test de percolación en la construcción del nuevo penal en el distrito de Santigo, Ica, Ica.</td>     </tr>     <tr>       <th>Sector</th>       <td>Saneamiento</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Obtener un estimado cuantitativo de la capacidad de absorción del terreno para seleccionar las mejores zonas para la ubicación de\nlos sistemas de tratamiento de aguas residuales (biodigestores y pozos de percolación).</td>     </tr>     <tr>       <th>Departamento</th>       <td>Ica</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>432774.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8416883.0</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-75.623375</td>     </tr>     <tr>       <th>lati</th>       <td>-14.31918</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_e8a1df7fec86ce6ba103442c4e173df1.setContent(html_d0e932e9afc208f69309463c017c98c7);
+            
+        
+
+        marker_376fb785acfac4fbbec73b0ea0245b94.bindPopup(popup_e8a1df7fec86ce6ba103442c4e173df1)
+        ;
+
+        
+    
+    
+            marker_376fb785acfac4fbbec73b0ea0245b94.bindTooltip(
+                `<div>
+                     Servicio de consultoría para elaboración de un test de percolación en la construcción del nuevo penal en el distrito de Santigo, Ica, Ica.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_376fb785acfac4fbbec73b0ea0245b94.setIcon(beautify_icon_52e265fb16c6f8d5a2e5b4e1498859c4);
+            
+    
+            var marker_d8faeb577c4f61f9c2f76cf22e7afc4e = L.marker(
+                [-13.927754168952893, -75.66028466919488],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_ed3504ea1e6ebc15bffe86d1bfb17802 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_d8faeb577c4f61f9c2f76cf22e7afc4e.setIcon(beautify_icon_ed3504ea1e6ebc15bffe86d1bfb17802);
+        
+    
+        var popup_173788e040a0aadd5b79be7c7fadab81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3921276607026c707a3dbebbe588b23a = $(`<div id="html_3921276607026c707a3dbebbe588b23a" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>29</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Servicio de consultoría para la contratación del servicio de análisis y modelamiento hidrológico para la ejecución del estudio de disponibilidades hídricas</td>     </tr>     <tr>       <th>Sector</th>       <td>Recursos Hídricos</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Modelamiento hidraulico del río Ica</td>     </tr>     <tr>       <th>Departamento</th>       <td>Ica</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>428671.72</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8460164.77</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-75.660285</td>     </tr>     <tr>       <th>lati</th>       <td>-13.927754</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_173788e040a0aadd5b79be7c7fadab81.setContent(html_3921276607026c707a3dbebbe588b23a);
+            
+        
+
+        marker_d8faeb577c4f61f9c2f76cf22e7afc4e.bindPopup(popup_173788e040a0aadd5b79be7c7fadab81)
+        ;
+
+        
+    
+    
+            marker_d8faeb577c4f61f9c2f76cf22e7afc4e.bindTooltip(
+                `<div>
+                     Servicio de consultoría para la contratación del servicio de análisis y modelamiento hidrológico para la ejecución del estudio de disponibilidades hídricas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d8faeb577c4f61f9c2f76cf22e7afc4e.setIcon(beautify_icon_ed3504ea1e6ebc15bffe86d1bfb17802);
+            
+    
+            var marker_1eddb26ee76bc48c90e3f904d480554b = L.marker(
+                [-9.822108728779513, -75.80461062648153],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_887f7e8464f3e6b6ce2d319dcf4c5ba3 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_1eddb26ee76bc48c90e3f904d480554b.setIcon(beautify_icon_887f7e8464f3e6b6ce2d319dcf4c5ba3);
+        
+    
+        var popup_32626600d774b90700b8ecb726aea2af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdb45eb194a9c6a1df704f7a589b15cd = $(`<div id="html_bdb45eb194a9c6a1df704f7a589b15cd" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>30</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Campaña de aforo para la estación hidrométrica La Rinconada- río Huallaga</td>     </tr>     <tr>       <th>Sector</th>       <td>Recursos Hídricos</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Aforo de caudales líquidos (ADCP )</td>     </tr>     <tr>       <th>Departamento</th>       <td>Huanuco</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>411768.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8914150.0</td>     </tr>     <tr>       <th>Zona</th>       <td>18</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-75.804611</td>     </tr>     <tr>       <th>lati</th>       <td>-9.822109</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_32626600d774b90700b8ecb726aea2af.setContent(html_bdb45eb194a9c6a1df704f7a589b15cd);
+            
+        
+
+        marker_1eddb26ee76bc48c90e3f904d480554b.bindPopup(popup_32626600d774b90700b8ecb726aea2af)
+        ;
+
+        
+    
+    
+            marker_1eddb26ee76bc48c90e3f904d480554b.bindTooltip(
+                `<div>
+                     Campaña de aforo para la estación hidrométrica La Rinconada- río Huallaga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1eddb26ee76bc48c90e3f904d480554b.setIcon(beautify_icon_887f7e8464f3e6b6ce2d319dcf4c5ba3);
+            
+    
+            var marker_fcd49d17cfc7a357b0fc3f8df8fea778 = L.marker(
+                [-15.180732927636587, -70.67993097131534],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_1426a7abf289f33940492b568da5df08 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_fcd49d17cfc7a357b0fc3f8df8fea778.setIcon(beautify_icon_1426a7abf289f33940492b568da5df08);
+        
+    
+        var popup_3d0f50356dd91b2dc1fe2c08c920e383 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cda177973b2c9e9e9e289fe1598b7d12 = $(`<div id="html_cda177973b2c9e9e9e289fe1598b7d12" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>31</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Hidrometría líquida y sólida en la cuenca del río Coata – Puno</td>     </tr>     <tr>       <th>Sector</th>       <td>Recursos Hídricos</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Aforo de caudales líquidos en 23 puntos, muestreo de sedimentos en 7 puntos</td>     </tr>     <tr>       <th>Departamento</th>       <td>Puno</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>319525.0</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8320991.0</td>     </tr>     <tr>       <th>Zona</th>       <td>19</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-70.679931</td>     </tr>     <tr>       <th>lati</th>       <td>-15.180733</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_3d0f50356dd91b2dc1fe2c08c920e383.setContent(html_cda177973b2c9e9e9e289fe1598b7d12);
+            
+        
+
+        marker_fcd49d17cfc7a357b0fc3f8df8fea778.bindPopup(popup_3d0f50356dd91b2dc1fe2c08c920e383)
+        ;
+
+        
+    
+    
+            marker_fcd49d17cfc7a357b0fc3f8df8fea778.bindTooltip(
+                `<div>
+                     Hidrometría líquida y sólida en la cuenca del río Coata – Puno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fcd49d17cfc7a357b0fc3f8df8fea778.setIcon(beautify_icon_1426a7abf289f33940492b568da5df08);
+            
+    
+            var marker_7c394dc9e8962bd5b457aa38806d9135 = L.marker(
+                [-13.51057557477884, -71.98026953871396],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_8b6293d7a4b0c3963723924b80039387 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_7c394dc9e8962bd5b457aa38806d9135.setIcon(beautify_icon_8b6293d7a4b0c3963723924b80039387);
+        
+    
+        var popup_fa1642ab1d0170b4ddc80de794cbf023 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_562047d8408ebc429190f1c7d67320a0 = $(`<div id="html_562047d8408ebc429190f1c7d67320a0" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>32</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Diseño e instalación de riego tecnificado de alta frecuencia</td>     </tr>     <tr>       <th>Sector</th>       <td>Agrícola</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Diseño, metrados e instalación de sistema de riego tecnificado</td>     </tr>     <tr>       <th>Departamento</th>       <td>Cusco</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>177358.43</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8504438.84</td>     </tr>     <tr>       <th>Zona</th>       <td>19</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-71.98027</td>     </tr>     <tr>       <th>lati</th>       <td>-13.510576</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_fa1642ab1d0170b4ddc80de794cbf023.setContent(html_562047d8408ebc429190f1c7d67320a0);
+            
+        
+
+        marker_7c394dc9e8962bd5b457aa38806d9135.bindPopup(popup_fa1642ab1d0170b4ddc80de794cbf023)
+        ;
+
+        
+    
+    
+            marker_7c394dc9e8962bd5b457aa38806d9135.bindTooltip(
+                `<div>
+                     Diseño e instalación de riego tecnificado de alta frecuencia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c394dc9e8962bd5b457aa38806d9135.setIcon(beautify_icon_8b6293d7a4b0c3963723924b80039387);
+            
+    
+            var marker_c5335416b3505cfd7d03637d3fe9fa79 = L.marker(
+                [-15.585214836545257, -70.12478822339966],
+                {
+  "lazy": true,
+}
+            ).addTo(feature_group_1d9830cad48250fbb73db6f95ff8637f);
+        
+    
+            var beautify_icon_39ebba5d5bd1e5b345c6eedfed4169d0 = new L.BeautifyIcon.icon(
+                {
+  "icon": "tint",
+  "borderWidth": 2,
+  "borderColor": "#121812",
+  "textColor": "#0952f1",
+  "backgroundColor": "#FFF",
+  "innerIconStyle": "",
+  "spin": false,
+  "isAlphaNumericIcon": false,
+}
+            )
+            marker_c5335416b3505cfd7d03637d3fe9fa79.setIcon(beautify_icon_39ebba5d5bd1e5b345c6eedfed4169d0);
+        
+    
+        var popup_1dc9cd41237e6e3141fcb99c333d4e11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab4150edee317dbd67dab0588742cf3d = $(`<div id="html_ab4150edee317dbd67dab0588742cf3d" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>33</th>     </tr>   </thead>   <tbody>     <tr>       <th>Proyecto</th>       <td>Venta de gaviones</td>     </tr>     <tr>       <th>Sector</th>       <td>Construcción</td>     </tr>     <tr>       <th>Tipo de servicio</th>       <td>Venta de gavión caja galvanizado 10x12 cm L:3 A: 1 MTS</td>     </tr>     <tr>       <th>Departamento</th>       <td>Puno</td>     </tr>     <tr>       <th>Coordenada E</th>       <td>379405.34</td>     </tr>     <tr>       <th>Coordenada N</th>       <td>8276626.91</td>     </tr>     <tr>       <th>Zona</th>       <td>19</td>     </tr>     <tr>       <th>Banda</th>       <td>L</td>     </tr>     <tr>       <th>long</th>       <td>-70.124788</td>     </tr>     <tr>       <th>lati</th>       <td>-15.585215</td>     </tr>   </tbody> </table></div>`)[0];
+                popup_1dc9cd41237e6e3141fcb99c333d4e11.setContent(html_ab4150edee317dbd67dab0588742cf3d);
+            
+        
+
+        marker_c5335416b3505cfd7d03637d3fe9fa79.bindPopup(popup_1dc9cd41237e6e3141fcb99c333d4e11)
+        ;
+
+        
+    
+    
+            marker_c5335416b3505cfd7d03637d3fe9fa79.bindTooltip(
+                `<div>
+                     Venta de gaviones
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c5335416b3505cfd7d03637d3fe9fa79.setIcon(beautify_icon_39ebba5d5bd1e5b345c6eedfed4169d0);
+            
+    
+            feature_group_1d9830cad48250fbb73db6f95ff8637f.addTo(map_c9c7b0a2916ca0a58d1a61703a035d47);
+        
+    
+
+            var geocoderOpts_geocoder_3030881ce7b68e9095948c6e0a3e53df = {
+  "collapsed": false,
+  "position": "topright",
+  "defaultMarkGeocode": true,
+  "zoom": 11,
+  "provider": "nominatim",
+  "providerOptions": {
+},
+};
+
+            // note: geocoder name should start with lowercase
+            var geocoderName_geocoder_3030881ce7b68e9095948c6e0a3e53df = geocoderOpts_geocoder_3030881ce7b68e9095948c6e0a3e53df["provider"];
+
+            var customGeocoder_geocoder_3030881ce7b68e9095948c6e0a3e53df = L.Control.Geocoder[ geocoderName_geocoder_3030881ce7b68e9095948c6e0a3e53df ](
+                geocoderOpts_geocoder_3030881ce7b68e9095948c6e0a3e53df['providerOptions']
+            );
+            geocoderOpts_geocoder_3030881ce7b68e9095948c6e0a3e53df["geocoder"] = customGeocoder_geocoder_3030881ce7b68e9095948c6e0a3e53df;
+
+            L.Control.geocoder(
+                geocoderOpts_geocoder_3030881ce7b68e9095948c6e0a3e53df
+            ).on('markgeocode', function(e) {
+                var zoom = geocoderOpts_geocoder_3030881ce7b68e9095948c6e0a3e53df['zoom'] || map_c9c7b0a2916ca0a58d1a61703a035d47.getZoom();
+                map_c9c7b0a2916ca0a58d1a61703a035d47.setView(e.geocode.center, zoom);
+            }).addTo(map_c9c7b0a2916ca0a58d1a61703a035d47);
+
+        
+    
+            var tile_layer_114bf4839d63876700e6c03decc93e79 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_57189b88b69609378a905205b6d25c71 = new L.Control.MiniMap(
+                tile_layer_114bf4839d63876700e6c03decc93e79,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_c9c7b0a2916ca0a58d1a61703a035d47.addControl(mini_map_57189b88b69609378a905205b6d25c71);
+        
+    
+            var layer_control_5d27e3f2b75d698ea6a47278371ee032_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_431ce988b68719df56bb3c5bc3043286,
+                    "Google Sat\u00e9lite" : tile_layer_54f2a8ce9efd7356942869d5d828ec93,
+                },
+                overlays :  {
+                    "Proyectos O\u0026R" : feature_group_1d9830cad48250fbb73db6f95ff8637f,
+                },
+            };
+            let layer_control_5d27e3f2b75d698ea6a47278371ee032 = L.control.layers(
+                layer_control_5d27e3f2b75d698ea6a47278371ee032_layers.base_layers,
+                layer_control_5d27e3f2b75d698ea6a47278371ee032_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_c9c7b0a2916ca0a58d1a61703a035d47);
+
+        
+</script>
+</html>
